@@ -1,0 +1,89 @@
+/***
+* CSS3 FLIP CARDS
+* Markup for an element that a user can hover to reveal content on the back, like a card
+* Browser Support: Safari, Firefox, Chrome, IE8+, and Touch Devices; (IE9 and below will not have any flip effect but will just change on hover)
+***/
+
+.flip-card {
+  display: block;
+  position: relative;
+  z-index: 1000;
+  width: 100px; 
+  height: 100px;
+}
+  
+  .card-front,
+  .card-back {
+    backface-visibility: hidden;
+    single-transition: transform;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%; 
+  }
+
+  .card-front {
+    transform: perspective: 300 rotateY(0));
+    z-index: 900;
+  }
+
+  .card-back {
+    transform: rotateY(-180deg); /*Using rotate instead of transform prevents the back of the card from flipping on page load because transition is only targeting transform. Super sweet. */
+     z-index: 800;
+  }
+
+  .flip-card:hover {
+    .card-front { 
+      transform:rotateY(180deg); /*//No 3D fallback*/
+      transform3d: perspective(300) rotateY(180deg); 
+    }
+    .card-back { 
+      z-index: 950; /*//No transform fallback*/
+      transform: rotateY(0deg)) perspective(300) rotateY(0deg);; /*//No 3D fallback*/
+    }
+  }
+}
+
+
+
+
+/*** Just for show... ***/
+
+.flip-card {
+  color: #fff;
+  cursor: pointer;
+  float: left;
+  font-weight: bold;
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  min-width: 100px;
+  max-width: 400px;
+}
+  
+  .card-front,
+  .card-back {
+    box-sizing: border-box;
+    border: 1px solid darken(#1B8CE8, 40%);
+    padding: 40px 0;
+  }
+
+  .card-front {
+    background-color: #499bea; /*Old browsers*/
+
+  }
+
+  .card-back {
+		background-color: #478ce0; /*// Old browsers*/
+  } 
+
+
+
+body {
+  background-color: #e6f2f7; /*// Old browsers*/
+}
+
+.viewport {
+  margin: 10px auto 0;
+  width: 500px;
+}

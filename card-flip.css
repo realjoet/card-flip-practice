@@ -1,0 +1,295 @@
+/**************************
+VARIABLES
+dark-grey: #424242;
+light-grey: #ECEFF1;
+dark-cobalt: #263238;
+light-cobalt: #37474F;
+electric-blue: #00ACC1;
+
+**************************/
+
+
+body {
+	font-family: "Helvetica";
+	color: #ECEFF1;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.work-1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.work-2 {
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+
+.work-3 {
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+
+.work-4 {
+	position: absolute;
+	top: 100%;
+	left: -100%;
+}
+
+.work-5 {
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+
+.work-6 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.work-display-row {
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: row nowrap;
+	margin: 0;
+}
+
+.flip-container {
+	width: 33%;
+	margin: 0;
+}
+
+	.flip-container:hover .flipper,  
+  .flip-container.hover .flipper {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+    	-o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 33vw;
+	height: 33vw;
+}
+
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+  
+  -o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+}
+
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.display-view--profile {
+	background: url(img/profPic.jpg) center no-repeat;
+	z-index: 2;
+	background-size: 100%;
+}
+
+.display-view--sherpa {
+	background: url(img/sherpa/sherpaApp-view1.jpg) center no-repeat;
+	z-index: 2;
+}
+
+.display-view--therapy-ball {
+	background: url(img/3d-printing/3d-print-show.jpg) center no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+
+.display-view--boxing-match {
+	background: url(img/parallax-boxer/boxing-match.png) center no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+
+.display-view--therapy-ball {
+	background: url(img/3d-printing/3d-print-show.jpg) center no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+
+.display-view--rtd-beacon {
+	background: url(img/3d-printing/3d-print-show.jpg) center no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+
+.display-view--spiffly {
+	background: url(img/3d-printing/3d-print-show.jpg) center no-repeat;
+	background-size: 100%;
+	z-index: 2;
+}
+
+.back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+
+	background: #263238;
+}
+
+
+
+
+
+div.work__display-info {
+	/*display: flex;
+	justify-content: flex-start;*/
+}
+
+			div.work__display-info h2{
+				width: 100%;
+				color: #00ACC1;
+				margin: 0;
+				position: relative;
+				top: 8%;
+				left: 8%;
+				font-size: 2.5em;
+				font-weight: 500;
+			}
+
+			div.work__display-info h4{
+				width: 100%;
+				margin: 1% 0;
+				position: relative;
+				top: 8%;
+				left: 8%;
+				font-size: 1.2em;
+				font-weight: 100;
+			}
+
+			div.work__display-info p{
+				color: #00ACC1;
+				width: 84%;
+				margin: 0;
+				padding: 4% 8%;
+				position: relative;
+				top: 8%;
+				font-weight: 400;
+			}
+
+			div.button {
+				width: 30%;
+				margin: 10% 0;
+				padding: 2%;
+				position: relative;
+				top: 10%;
+				left: 30%;
+				color: #00ACC1;
+				border: 1px solid #00ACC1;
+				text-align: center;
+			}
+
+				div.button:hover {
+					color: #263238;
+					font-weight: 500;
+					background-color: #00ACC1;
+					cursor: pointer;
+					box-shadow: 1px 1px 20px #263238;
+				}
+
+.contact-me__social {
+	width: 84%;
+	margin: 20% 8% 0;
+}
+
+	.contact-me__social a{
+		width: 48px;
+		height: 48px;
+		margin: 0 2%;
+		overflow: hidden;
+
+	}
+
+	.contact-me__social--twitter{
+		background: url(img/logos/twitter-icon.svg) 0 0 no-repeat;
+		background-size: 48px;
+		width: 48px;
+		height: 48px;
+		margin: 0 5% 0 0;
+		float: left;
+	}
+
+	.contact-me__social--twitter:hover{
+		background: url(img/logos/twitter-icon.svg) 0 -48px no-repeat;
+	}
+
+	.contact-me__social--linkedin{
+		background: url(img/logos/linkedin-icon.svg) 0 0 no-repeat;
+		background-size: 45px;
+		overflow: hidden;
+		width: 45px;
+		height: 45px;
+		margin: 0 5% 0 0;
+		float: left;
+	}
+
+	.contact-me__social--linkedin:hover{
+		background: url(img/logos/linkedin-icon.svg) 0 -47px no-repeat;
+	}
+
+	.contact-me__social--github{
+		background: url(img/logos/github-icon.svg) 0 0 no-repeat;
+		background-size: 45px;
+		overflow: hidden;
+		width: 45px;
+		height: 45px;
+		margin: 0 5% 0 0;
+		float: left;
+	}
+
+	.contact-me__social--github:hover{
+		background: url(img/logos/github-icon.svg) 0 -46px no-repeat;
+	}
+
+	.contact-me__social--medium{
+		background: url(img/logos/medium-icon.svg) 0 0 no-repeat;
+		background-size: 48px;
+		overflow: hidden;
+		width: 48px;
+		height: 48px;
+		margin: 0 5% 0 0;
+		float: left;
+	}
+
+	.contact-me__social--medium:hover{
+		background: url(img/logos/medium-icon.svg) 0 -48px no-repeat;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
